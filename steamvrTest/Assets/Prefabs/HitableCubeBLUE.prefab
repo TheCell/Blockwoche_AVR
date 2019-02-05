@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33135639297018462}
   - component: {fileID: 23042188455772196}
   - component: {fileID: 65324432259607736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 23899125670405026}
   - component: {fileID: 65606532738655670}
   - component: {fileID: 114220974608895730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HitableCubeBLUE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
