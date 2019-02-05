@@ -6,6 +6,7 @@ public class Saber : MonoBehaviour
 {
 
 	public LayerMask layer;
+	public ParticleSystem hitParticleSystem;
 	private Vector3 previousPosition;
 
 	// Use this for initialization
@@ -22,6 +23,7 @@ public class Saber : MonoBehaviour
 		{
 			if (Vector3.Angle(transform.position - previousPosition, hit.transform.up) > 130)
 			{
+				hitParticleSystem.Play();
 				Destroy(hit.transform.gameObject);
 			}
 		}

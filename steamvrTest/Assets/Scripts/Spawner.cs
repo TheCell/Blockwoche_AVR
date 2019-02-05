@@ -5,10 +5,14 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-	public GameObject[] cubes;
-	public Transform[] points;
+	public GameObject cubeRed;
+	public GameObject cubeBlue;
+	public Transform[] pointsLeft;
+	public Transform[] pointsRight;
 	public float beat = (60/130) * 2;
 	public float timer;
+	private int previousAngleRed = 90;
+	private int previousAngleBlue = 90;
 
 	// Use this for initialization
 	void Start ()
@@ -21,9 +25,58 @@ public class Spawner : MonoBehaviour
 	{
 		if (timer>beat)
 		{
-			GameObject cube = Instantiate(cubes[Random.Range(0, cubes.Length)], points[Random.Range(0, points.Length)]);
+			GameObject cube;
+
+			// Random 50/50 left or right
+			if (Random.value < 0.5)
+			{
+				// Random 10/90 to have blue or red
+				if (Random.value < 0.1)
+				{
+					cube = Instantiate(cubeBlue, pointsLeft[Random.Range(0, pointsLeft.Length)]);
+				}
+				else
+				{
+					cube = Instantiate(cubeRed, pointsLeft[Random.Range(0, pointsLeft.Length)]);
+				}
+			}
+			else
+			{
+				// Random 10/90 to have red or blue 
+				if (Random.value < 0.1)
+				{
+					cube = Instantiate(cubeRed, pointsLeft[Random.Range(0, pointsLeft.Length)]);
+				}
+				else
+				{
+					cube = Instantiate(cubeBlue, pointsRight[Random.Range(0, pointsRight.Length)]);
+
+				}
+			}
+
+			int angle = 90 * Random.Range(0, 4);
+
+			if (cube.name.ToLower().Contains("blue"))
+			{
+				if (previousAngleBlue == angle)
+				{
+					angle += 90;
+				}
+
+				previousAngleBlue = angle;
+			}
+			else
+			{
+				if (previousAngleRed == angle)
+				{
+					angle += 90;
+				}
+
+				previousAngleRed = angle;
+			}
+			
 			cube.transform.localPosition = Vector3.zero;
-			cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
+			cube.transform.Rotate(transform.forward, angle);
 			timer -= beat;
 		}
 
