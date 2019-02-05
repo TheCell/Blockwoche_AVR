@@ -11,7 +11,13 @@ public class CubeMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += Time.deltaTime * transform.forward * 2; 
+        transform.position += Time.deltaTime * transform.forward * 2;
+        
+        //Garbage Collector
+        if(transform.position.z <= -6)
+        {
+            Destroy(gameObject);
+        }
 		
 	}
 }
