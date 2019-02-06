@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Falldown : MonoBehaviour
 {
+	public float unitsToFall = 500;
 	private GameObject cameraRig;
 	private float fallTime = 1.0f;
 	private float startFallingTime;
@@ -18,7 +19,7 @@ public class Falldown : MonoBehaviour
 	{
 		cameraRig = gameObject;
 		startPosition = transform.position;
-		endPosition = transform.position - Vector3.up * 500;
+		endPosition = transform.position - Vector3.up * unitsToFall;
 	}
 	
 	// Update is called once per frame
