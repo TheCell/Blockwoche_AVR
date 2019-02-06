@@ -7,7 +7,7 @@ public class SpawnerRechts : MonoBehaviour
 
     public GameObject[] cubes;
     public Transform[] points;
-    public float beat = (100 / 130);
+    public float beat = (60 / 100);
     public float timer;
 
     // Use this for initialization
@@ -26,7 +26,7 @@ public class SpawnerRechts : MonoBehaviour
             GameObject cube;
             if (timer > beat)
             {
-                int index = 9;
+                int index = 13;
                 int number = Random.Range(0, 15);
 
                 if (number < index)
