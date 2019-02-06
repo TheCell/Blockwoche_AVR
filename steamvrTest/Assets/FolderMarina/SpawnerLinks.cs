@@ -6,7 +6,7 @@ public class SpawnerLinks : MonoBehaviour {
 
     public GameObject[] cubes;
     public Transform[] points;
-    public float beat = (60 / 130);
+    public float beat = (100 / 130);
     public float timer;
 
     // Use this for initialization
@@ -18,29 +18,32 @@ public class SpawnerLinks : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        GameObject cube;
-        if (timer > beat)
+        int show = Random.Range(1, 7);
+        //Debug.Log(show);
+        if (show > 3)
         {
-            int index = 8;
-
-            int number = Random.Range(0, 10);
-
-            if (number < index)
+            GameObject cube;
+            if (timer > beat)
             {
-                cube = Instantiate(cubes[1], points[Random.Range(0, points.Length)]);
-                //welcher Würfel + anwelher Position
+                int index = 8;
+                int number = Random.Range(0, 15);
+                
+                if (number < index)
+                {
+                    cube = Instantiate(cubes[1], points[Random.Range(0, points.Length)]);
+                    //welcher Würfel + anwelcher Position
+                }else{
+                    cube = Instantiate(cubes[0], points[Random.Range(0, points.Length)]);
+                }
+                // GameObject cube = Instantiate(cubes[Random.Range(0, cubes.Length)], points[Random.Range(0, points.Length)]);
+                cube.transform.localPosition = Vector3.zero;
+                //cube.transform.localPosition = new Vector3(0, Range.Random(0, 4), 0); -> variable Position
+                cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
+                timer -= beat;
             }
-            else
-            {
-                cube = Instantiate(cubes[0], points[Random.Range(0, points.Length)]);
-            }
-            // GameObject cube = Instantiate(cubes[Random.Range(0, cubes.Length)], points[Random.Range(0, points.Length)]);
-
-            cube.transform.localPosition = Vector3.zero;
-            cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
-            timer -= beat;
+            timer += Time.deltaTime;
         }
-
-        timer += Time.deltaTime;
+        show = 0;
     }
+    
 }
