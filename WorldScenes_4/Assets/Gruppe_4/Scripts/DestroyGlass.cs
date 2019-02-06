@@ -10,7 +10,6 @@ public class DestroyGlass : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		falldownScript = GetComponent<Falldown>();
 	}
 	
 	// Update is called once per frame
