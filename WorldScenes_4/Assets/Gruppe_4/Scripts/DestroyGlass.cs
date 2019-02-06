@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class DestroyGlass : MonoBehaviour
 {
+	public Falldown falldownScript;
+	public int sceneNumber;
 
 	// Use this for initialization
 	void Start ()
 	{
-		
+		falldownScript = GetComponent<Falldown>();
 	}
 	
 	// Update is called once per frame
@@ -19,6 +21,7 @@ public class DestroyGlass : MonoBehaviour
 
 	private void OnCollisionEnter(Collision collision)
 	{
-		Destroy(collision.gameObject);
+		Destroy(gameObject);
+		falldownScript.startFalldown(sceneNumber);
 	}
 }

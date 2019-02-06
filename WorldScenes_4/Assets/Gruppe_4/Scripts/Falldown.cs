@@ -8,32 +8,33 @@ public class Falldown : MonoBehaviour
 	private float fallTime = 1.0f;
 	private float startFallingTime;
 	private bool isFalling = false;
+	private bool started = false;
 	private Vector3 startPosition;
 	private Vector3 endPosition;
+	private int sceneNumber;
 
 	// Use this for initialization
 	void Start ()
 	{
 		cameraRig = gameObject;
 		startPosition = transform.position;
-		endPosition = transform.position - Vector3.up * 50;
+		endPosition = transform.position - Vector3.up * 500;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (!isFalling)
+		if (isFalling)
 		{
-			startFalldown();
+			FallDown();
 		}
-
-		FallDown();
 	}
 
-	public void startFalldown()
+	public void startFalldown(int sceneNumber)
 	{
+		this.sceneNumber = sceneNumber;
 		isFalling = true;
-		startFallingTime = Time.realtimeSinceStartup + 4;
+		startFallingTime = Time.realtimeSinceStartup;
 	}
 
 	void FallDown()
@@ -43,13 +44,16 @@ public class Falldown : MonoBehaviour
 			float endTime = startFallingTime + fallTime;
 			float currentTime = Time.realtimeSinceStartup;
 			float lerpT = (1 / (endTime - startFallingTime)) * (currentTime - startFallingTime);
-			Debug.Log(lerpT);
 
 			if (endTime > currentTime)
 			{
 				Vector3 currentPosition = startPosition;
 				currentPosition.y = Mathf.Lerp(startPosition.y, endPosition.y, lerpT);
 				transform.position = currentPosition;
+			}
+			else
+			{
+				WorldManager.LoadScene(this.sceneNumber);
 			}
 		}
 	}
