@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: f6c82b47d126fb94ab9f4425c93f2cfb
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 038dddb8133532dfa694615f429c11e2
+  longitude: 13.417
+  latitude: 52.533
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -3.0001903, y: 3.7652235, z: -6.131739}
+      lookAt: {x: 2.253903, y: 1.138177, z: -0.87764585}
+      up: {x: 0.23570226, y: 0.94280905, z: 0.23570226}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: base point
+    100004: basispunkt
+    100006: Image 1
+    100008: RD-3D_blac
+    100010: RD-3D_bloo
+    100012: RD-3D_blue
+    100014: RD-3D_caps
+    100016: RD-3D_dark
+    100018: RD-3D_dark#1
+    100020: RD-3D_feet
+    100022: RD-3D_feet#1
+    100024: RD-3D_glas
+    100026: RD-3D_grey
+    100028: RD-3D_hand
+    100030: RD-3D_me01
+    100032: RD-3D_meta
+    100034: RD-3D_meta#1
+    100036: RD-3D_rack
+    100038: RD-3D_tube
+    100040: RD-3D_wh01
+    100042: RD-3D_whit
+    100044: RD-3D_whit#1
+    100046: skp118
+    100048: skpF3D
+    400000: //RootNode
+    400002: base point
+    400004: basispunkt
+    400006: Image 1
+    400008: RD-3D_blac
+    400010: RD-3D_bloo
+    400012: RD-3D_blue
+    400014: RD-3D_caps
+    400016: RD-3D_dark
+    400018: RD-3D_dark#1
+    400020: RD-3D_feet
+    400022: RD-3D_feet#1
+    400024: RD-3D_glas
+    400026: RD-3D_grey
+    400028: RD-3D_hand
+    400030: RD-3D_me01
+    400032: RD-3D_meta
+    400034: RD-3D_meta#1
+    400036: RD-3D_rack
+    400038: RD-3D_tube
+    400040: RD-3D_wh01
+    400042: RD-3D_whit
+    400044: RD-3D_whit#1
+    400046: skp118
+    400048: skpF3D
+    2100000: Material 1
+    2100002: Cobas_dark1
+    2100004: _GLOBAL_2
+    2100006: Cobas_glass1
+    2100008: Metall.Edelstahl1
+    2100010: '[Color_G11]'
+    2100012: '[Color_A11]'
+    2100014: '[Color_D01]'
+    2100016: Cobas_white1
+    2100018: Cover_black1
+    2100020: Blood1
+    2100022: Cover_blue1
+    2100024: Cap-orange1
+    2100026: Cap-blue-light1
+    2100028: Cap-green1
+    2100030: Cap-red1
+    2100032: Metall.Stahl.Ver1
+    2100034: Cobas_grey1
+    2100036: Rack-HHT1
+    2100038: Glass Clear1
+    2300000: Image 1
+    2300002: RD-3D_blac
+    2300004: RD-3D_bloo
+    2300006: RD-3D_blue
+    2300008: RD-3D_caps
+    2300010: RD-3D_dark
+    2300012: RD-3D_dark#1
+    2300014: RD-3D_feet
+    2300016: RD-3D_feet#1
+    2300018: RD-3D_glas
+    2300020: RD-3D_grey
+    2300022: RD-3D_hand
+    2300024: RD-3D_me01
+    2300026: RD-3D_meta
+    2300028: RD-3D_meta#1
+    2300030: RD-3D_rack
+    2300032: RD-3D_tube
+    2300034: RD-3D_wh01
+    2300036: RD-3D_whit
+    2300038: RD-3D_whit#1
+    3300000: Image 1
+    3300002: RD-3D_blac
+    3300004: RD-3D_bloo
+    3300006: RD-3D_blue
+    3300008: RD-3D_caps
+    3300010: RD-3D_dark
+    3300012: RD-3D_dark#1
+    3300014: RD-3D_feet
+    3300016: RD-3D_feet#1
+    3300018: RD-3D_glas
+    3300020: RD-3D_grey
+    3300022: RD-3D_hand
+    3300024: RD-3D_me01
+    3300026: RD-3D_meta
+    3300028: RD-3D_meta#1
+    3300030: RD-3D_rack
+    3300032: RD-3D_tube
+    3300034: RD-3D_wh01
+    3300036: RD-3D_whit
+    3300038: RD-3D_whit#1
+    4300000: Mesh 3D_cobas-p701
+    4300002: Mesh RD-3D_dark
+    4300004: Mesh RD-3D_feet
+    4300006: Mesh RD-3D_glas
+    4300008: Mesh RD-3D_me01
+    4300010: Mesh RD-3D_meta
+    4300012: Mesh RD-3D_whit
+    4300014: Mesh RD-3D_blac
+    4300016: Mesh RD-3D_bloo
+    4300018: Mesh RD-3D_blue
+    4300020: Mesh RD-3D_caps
+    4300022: Mesh RD-3D_dark#1
+    4300024: Mesh RD-3D_feet#1
+    4300026: Mesh RD-3D_grey
+    4300028: Mesh RD-3D_hand
+    4300030: Mesh RD-3D_meta#1
+    4300032: Mesh RD-3D_rack
+    4300034: Mesh RD-3D_tube
+    4300036: Mesh RD-3D_wh01
+    4300038: Mesh RD-3D_whit#1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
