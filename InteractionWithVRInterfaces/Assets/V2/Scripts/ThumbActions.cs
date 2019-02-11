@@ -1,18 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Leap.Unity.Attachments;
 
 public class ThumbActions : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField] private AttachmentHands attachmentHandsUI;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +12,7 @@ public class ThumbActions : MonoBehaviour {
         if (tipAction != null)
         {
             Debug.Log("Detatch UI");
+            attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
         }
     }
 }
