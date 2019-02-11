@@ -20,11 +20,11 @@ public class HUD_Follow : MonoBehaviour
     {
         panel.LookAt(cam);
         var camForward = cam.forward;
-        camForward.y = cam.position.y;
-        panel.position = cam.position + camForward * distance;
-        //var panelHeight = cam.localPosition.y - height;
-        //var position = panel.position;
-        //position.y = panelHeight > 0.2f ? panelHeight : 0.2f;
-        //panel.position = position;
+        camForward.y = 0f;
+        panel.position = cam.position + camForward.normalized * distance;
+        var panelHeight = cam.localPosition.y - height;
+        var position = panel.position;
+        position.y = panelHeight > 0.2f ? panelHeight : 0.2f;
+        panel.position = position;
     }
 }
