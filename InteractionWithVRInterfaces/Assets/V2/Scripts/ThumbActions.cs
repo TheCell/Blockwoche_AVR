@@ -5,6 +5,16 @@ using Leap.Unity.Attachments;
 
 public class ThumbActions : MonoBehaviour {
     [SerializeField] private AttachmentHands attachmentHandsUI;
+    [SerializeField] private Material detachUI;
+    [SerializeField] private Material attachUI;
+
+    private MeshRenderer gameObjectRenderer;
+
+    private void Start()
+    {
+        MeshRenderer gameObjectRenderer = GetComponent<MeshRenderer>();
+        gameObjectRenderer.material = detachUI;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +23,14 @@ public class ThumbActions : MonoBehaviour {
         {
             Debug.Log("Detatch UI");
             attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
+            if (attachmentHandsUI.enabled)
+            {
+                gameObjectRenderer.material = detachUI;
+            }
+            else
+            {
+                gameObjectRenderer.material = attachUI;
+            }
         }
     }
 }

@@ -5927,6 +5927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attachmentHandsUI: {fileID: 1436167282}
+  detachUI: {fileID: 2100000, guid: 81b1d01bebc7fa144ad150c1875360e4, type: 2}
+  attachUI: {fileID: 2100000, guid: 41510ee6aced3954ab398f9fcd364c32, type: 2}
 --- !u!135 &498117901
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19915,6 +19917,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b13a9682dbadb42a5452445deb4cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detachUI: {fileID: 2100000, guid: 81b1d01bebc7fa144ad150c1875360e4, type: 2}
+  attachUI: {fileID: 2100000, guid: 41510ee6aced3954ab398f9fcd364c32, type: 2}
 --- !u!135 &1899470220
 SphereCollider:
   m_ObjectHideFlags: 0
