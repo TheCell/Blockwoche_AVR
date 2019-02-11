@@ -19,7 +19,9 @@ public class HUD_Follow : MonoBehaviour
     private void LateUpdate()
     {
         panel.LookAt(cam);
-        panel.position = cam.position + cam.forward * distance;
+        var camForward = cam.forward;
+        camForward.y = cam.position.y;
+        panel.position = cam.position + camForward * distance;
         var panelHeight = cam.localPosition.y - height;
         var position = panel.position;
         position.y = panelHeight > 0.2f ? panelHeight : 0.2f;
