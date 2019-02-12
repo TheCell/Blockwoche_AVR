@@ -4,10 +4,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CloseWorkstation : MonoBehaviour {
-    [SerializeField] private AnchorableBehaviour anchorableBehaviour;
+    private AnchorableBehaviour anchorableBehaviour;
+
+    private void Start()
+    {
+        anchorableBehaviour = GetComponent<AnchorableBehaviour>();
+    }
 
     public void AttachToParrentIfPossible()
     {
-        anchorableBehaviour.TryAttachToNearestAnchor();
+
+        
+
+        Debug.Log("Try Attach - Result:");
+        Anchor pref = anchorableBehaviour.GetNearestValidAnchor(false);
+
+        Debug.Log(pref);
+        transform.position = pref.transform.position;
+        bool result = anchorableBehaviour.TryAttachToNearestAnchor();
+        Debug.Log(result);
     }
 }
