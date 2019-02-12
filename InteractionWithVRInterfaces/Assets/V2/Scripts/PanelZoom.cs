@@ -22,10 +22,13 @@ public class PanelZoom : MonoBehaviour
 	public void zoomIn()
 	{
 		Vector3 scale = panel.transform.localScale;
-		scale.x += 0.3f;
-		scale.y += 0.3f;
-		scale.z += 0.3f;
-		panel.transform.localScale = scale;
+		if (scale.x > 0.4f)
+		{
+			scale.x += 0.3f;
+			scale.y += 0.3f;
+			scale.z += 0.3f;
+			panel.transform.localScale = scale;
+		}
 	}
 
 	public void zoomOut()
