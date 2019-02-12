@@ -12,7 +12,7 @@ public class ThumbActions : MonoBehaviour {
 
     private void Start()
     {
-        MeshRenderer gameObjectRenderer = GetComponent<MeshRenderer>();
+        gameObjectRenderer = GetComponent<MeshRenderer>();
         gameObjectRenderer.material = detachUI;
     }
 
@@ -23,6 +23,7 @@ public class ThumbActions : MonoBehaviour {
         {
             Debug.Log("Detatch UI");
             attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
+            tipAction.setMaterial(attachmentHandsUI.enabled);
             if (attachmentHandsUI.enabled)
             {
                 gameObjectRenderer.material = detachUI;
