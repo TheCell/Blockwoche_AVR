@@ -21,22 +21,28 @@ public class MachineDisplayCheck : MonoBehaviour
 		
 	}
 
-	private void OnTriggerEnter(Collider other)
-	{
-		MachineID machineNumber = other.GetComponent<MachineID>();
-		hideAllPanels();
+    private void OnTriggerStay(Collider other)
+    {
+        MachineID machineNumber = other.GetComponent<MachineID>();
 
-		if (machineNumber != null)
-		{
-			int machineID = machineNumber.getMachineID();
-			//Debug.Log(machineID);
-			displayPanel(machineID);
-		}
-		else
-		{
-			noMachinesForPanelsSymbol.SetActive(true);
-			//Debug.Log("Collider " + other.gameObject.name + " has no MachineID Script");
-		}
+        if (machineNumber != null)
+        {
+            hideAllPanels();
+            int machineID = machineNumber.getMachineID();
+            //Debug.Log(machineID);
+            displayPanel(machineID);
+        }
+        else
+        {
+            hideAllPanels();
+            noMachinesForPanelsSymbol.SetActive(true);
+            //Debug.Log("Collider " + other.gameObject.name + " has no MachineID Script");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+	{
+		
 	}
 
 	private void displayPanel(int panelID)
