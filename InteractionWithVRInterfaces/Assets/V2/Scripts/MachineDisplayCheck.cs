@@ -5,12 +5,14 @@ using UnityEngine;
 public class MachineDisplayCheck : MonoBehaviour
 {
 	[SerializeField]
-	GameObject[] machinePanels;
+	private GameObject[] machinePanels;
+	[SerializeField]
+	private GameObject noMachinesForPanelsSymbol;
 
 	// Use this for initialization
 	void Start ()
 	{
-		
+		hideAllPanels();
 	}
 	
 	// Update is called once per frame
@@ -22,15 +24,17 @@ public class MachineDisplayCheck : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		MachineID machineNumber = other.GetComponent<MachineID>();
+		hideAllPanels();
+
 		if (machineNumber != null)
 		{
 			int machineID = machineNumber.getMachineID();
 			//Debug.Log(machineID);
-			hideAllPanels();
 			displayPanel(machineID);
 		}
 		else
 		{
+			noMachinesForPanelsSymbol.SetActive(true);
 			//Debug.Log("Collider " + other.gameObject.name + " has no MachineID Script");
 		}
 	}
@@ -52,6 +56,7 @@ public class MachineDisplayCheck : MonoBehaviour
 		for (int i = 0; i < machinePanels.Length; i++)
 		{
 			machinePanels[i].SetActive(false);
+			noMachinesForPanelsSymbol.SetActive(false);
 		}
 	}
 }
