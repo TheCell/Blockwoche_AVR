@@ -40,6 +40,6 @@ public class RoomLogic : MonoBehaviour
 
     public void TemperatureSliderChanged(float temperate)
     {
-        temperatureValue.text = Math.Round(temperate, 2) + " °C";
+        temperatureValue.text = Math.Round(temperate, 1) + " °C";
     }
 }
