@@ -25,13 +25,13 @@ public class MachineDisplayCheck : MonoBehaviour
 		if (machineNumber != null)
 		{
 			int machineID = machineNumber.getMachineID();
-			Debug.Log(machineID);
+			//Debug.Log(machineID);
 			hideAllPanels();
 			displayPanel(machineID);
 		}
 		else
 		{
-			Debug.Log("Collider " + other.gameObject.name + " has no MachineID Script");
+			//Debug.Log("Collider " + other.gameObject.name + " has no MachineID Script");
 		}
 	}
 
@@ -43,7 +43,7 @@ public class MachineDisplayCheck : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("Machine with ID " + panelID + " does not exist");
+			//Debug.Log("Machine with ID " + panelID + " does not exist");
 		}
 	}
 
