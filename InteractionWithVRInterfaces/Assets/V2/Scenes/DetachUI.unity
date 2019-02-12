@@ -8879,7 +8879,7 @@ Prefab:
     - target: {fileID: 114455807356359938, guid: 42e8bd39fe145a8419d212958fac6589,
         type: 2}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4854436900119490, guid: 42e8bd39fe145a8419d212958fac6589, type: 2}
       propertyPath: m_LocalPosition.x
@@ -9100,6 +9100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0071f28c4a8b93444aaa05456a082381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transformTweenBehaviour: {fileID: 864494516}
+  anchor: {fileID: 1258382496}
 --- !u!1 &865344078
 GameObject:
   m_ObjectHideFlags: 0
@@ -12904,15 +12906,15 @@ Prefab:
       objectReference: {fileID: 1993348677}
     - target: {fileID: 4157122855007356, guid: 0ec3b9195e40d4f4e9ca839839bfbf6a, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4157122855007356, guid: 0ec3b9195e40d4f4e9ca839839bfbf6a, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4157122855007356, guid: 0ec3b9195e40d4f4e9ca839839bfbf6a, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 114589100428820638, guid: 0ec3b9195e40d4f4e9ca839839bfbf6a,
         type: 2}
