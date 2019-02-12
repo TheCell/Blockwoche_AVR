@@ -31,7 +31,7 @@ public class RoomLogic : MonoBehaviour
             RenderSettings.ambientIntensity = ambientIntensity;
             RenderSettings.reflectionIntensity = reflectionIntensity;
         }
-
+        else
         {
             RenderSettings.ambientIntensity = 0;
             RenderSettings.reflectionIntensity = 0;
@@ -40,6 +40,6 @@ public class RoomLogic : MonoBehaviour
 
     public void TemperatureSliderChanged(float temperate)
     {
-        temperatureValue.text = temperate.ToString();
+        temperatureValue.text = Math.Round(temperate, 2) + " °C";
     }
 }
