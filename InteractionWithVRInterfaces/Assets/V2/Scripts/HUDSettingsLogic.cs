@@ -19,12 +19,12 @@ public class HUDSettingsLogic : MonoBehaviour
         if (hud.activeSelf)
         {
             hud.SetActive(false);
-            showHUD.text = "Show " + substring;
+            showHUD.text = "Show" + substring;
         }
         else
         {
             hud.SetActive(true);
-            showHUD.text = "Hide " + substring;
+            showHUD.text = "Hide" + substring;
         }
     }
 
