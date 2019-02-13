@@ -11,7 +11,8 @@ public class MachineDisplayCheck : MonoBehaviour
     [SerializeField] private Material interactableActiveMaterial;
 
     private GameObject[] allInteractibleGameObjects;
-    private float timer;
+    private bool startShowing;
+    private bool inInteractableBox;
 
     // Use this for initialization
     private void Start()
@@ -34,6 +35,7 @@ public class MachineDisplayCheck : MonoBehaviour
                 interactibleRenderer.material = this.interactableMaterial;
             }
         }
+        startShowing = false;
     }
 
     public void HideAllInteractibles()
@@ -43,31 +45,42 @@ public class MachineDisplayCheck : MonoBehaviour
             MeshRenderer objectRenderer = allInteractibleGameObjects[i].GetComponent<MeshRenderer>();
             objectRenderer.enabled = false;
         }
+        startShowing = true;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (timer > 0.5f)
+        if (startShowing)
         {
-            MachineID machineNumber = other.GetComponent<MachineID>();
-
-            if (machineNumber != null)
+            if (inInteractableBox)
             {
-                HideAllPanels();
-                int machineID = machineNumber.getMachineID();
-                //Debug.Log(machineID);
-                DisplayPanel(machineID);
+                MachineID machineNumber = other.GetComponent<MachineID>();
+
+                if (machineNumber != null)
+                {
+                    HideAllPanels();
+                    int machineID = machineNumber.getMachineID();
+                    //Debug.Log(machineID);
+                    DisplayPanel(machineID);
+                }
+
             }
-            else
+
+            if (!inInteractableBox)
             {
                 HideAllPanels();
                 noMachinesForPanelsSymbol.SetActive(true);
             }
-
-            timer = 0f;
         }
+        else
+        {
+            Renderer boxRenderer = other.GetComponent<Renderer>();
 
-        timer += Time.deltaTime;
+            if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
+            {
+                boxRenderer.material = this.interactableActiveMaterial;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -76,6 +89,7 @@ public class MachineDisplayCheck : MonoBehaviour
 
         if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
         {
+            inInteractableBox = true;
             boxRenderer.material = this.interactableActiveMaterial;
         }
     }
@@ -86,6 +100,7 @@ public class MachineDisplayCheck : MonoBehaviour
 
         if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
         {
+            inInteractableBox = false;
             boxRenderer.material = this.interactableMaterial;
         }
     }
@@ -103,7 +118,7 @@ public class MachineDisplayCheck : MonoBehaviour
         for (int i = 0; i < machinePanels.Length; i++)
         {
             machinePanels[i].SetActive(false);
-            noMachinesForPanelsSymbol.SetActive(false);
         }
+        noMachinesForPanelsSymbol.SetActive(false);
     }
 }
