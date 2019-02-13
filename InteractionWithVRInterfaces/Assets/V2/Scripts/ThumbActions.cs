@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Leap.Unity.Attachments;
 
-public class ThumbActions : MonoBehaviour {
+public class ThumbActions : MonoBehaviour
+{
     [SerializeField] private AttachmentHands attachmentHandsUI;
     [SerializeField] private Material detachUI;
     [SerializeField] private Material attachUI;
-    [SerializeField] private ParticleSystem particleSystem;
-    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] List<GameObject> connectParticleObject;
+    private List<MeshRenderer> meshRenderers;
+    private List<ParticleSystem> particleSystems;
+
     private DetachAttach detachAttach;
 
     private MeshRenderer gameObjectRenderer;
@@ -18,6 +21,11 @@ public class ThumbActions : MonoBehaviour {
         gameObjectRenderer = GetComponent<MeshRenderer>();
         gameObjectRenderer.material = detachUI;
         detachAttach = GetComponentInParent<DetachAttach>();
+        foreach (GameObject particleObject in connectParticleObject)
+        {
+            meshRenderers.Add(particleObject.GetComponent<MeshRenderer>());
+            particleSystems.Add(particleObject.GetComponent<ParticleSystem>());
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,13 +47,32 @@ public class ThumbActions : MonoBehaviour {
     {
         if (attachmentHandsUI.enabled)
         {
-            meshRenderer.enabled = true;
+            enableMeshRenderer();
             gameObjectRenderer.material = detachUI;
         }
         else
         {
-            meshRenderer.enabled = false;
+            playParticleEffect();
             gameObjectRenderer.material = attachUI;
+        }
+    }
+
+    private void enableMeshRenderer()
+    {
+        foreach (MeshRenderer meshRenderer in meshRenderers)
+        {
+            meshRenderer.enabled = true;
+        }
+    }
+
+    private void playParticleEffect()
+    {
+        foreach(MeshRenderer meshRenderer in meshRenderers)
+        {
+            meshRenderer.enabled = false;
+        }
+        foreach(ParticleSystem particleSystem in particleSystems)
+        {
             particleSystem.Play();
         }
     }
