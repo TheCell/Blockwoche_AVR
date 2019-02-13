@@ -2638,6 +2638,7 @@ MonoBehaviour:
   attachmentHandsUI: {fileID: 1436167282}
   detachUI: {fileID: 2100000, guid: 81b1d01bebc7fa144ad150c1875360e4, type: 2}
   attachUI: {fileID: 2100000, guid: 41510ee6aced3954ab398f9fcd364c32, type: 2}
+  delayTime: 1
 --- !u!135 &196710682
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14566,6 +14567,7 @@ MonoBehaviour:
   machinePanels:
   - {fileID: 112553015}
   - {fileID: 871214084}
+  noMachinesForPanelsSymbol: {fileID: 0}
 --- !u!65 &974347862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20886,11 +20888,11 @@ MonoBehaviour:
   _templateLayer:
     layerIndex: 0
   _interactionLayer:
-    layerIndex: 9
-  _interactionNoContactLayer:
     layerIndex: 10
-  _contactBoneLayer:
+  _interactionNoContactLayer:
     layerIndex: 11
+  _contactBoneLayer:
+    layerIndex: 12
   _drawControllerRuntimeGizmos: 0
 --- !u!1 &1463860527
 GameObject:
