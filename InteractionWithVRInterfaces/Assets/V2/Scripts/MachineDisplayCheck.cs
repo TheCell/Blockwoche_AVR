@@ -13,10 +13,13 @@ public class MachineDisplayCheck : MonoBehaviour
 	[SerializeField]
 	private Material interactableActiveMaterial;
 
+	private GameObject[] allInteractibleGameObjects;
+
 	// Use this for initialization
 	void Start ()
 	{
 		hideAllPanels();
+		allInteractibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
 	}
 	
 	// Update is called once per frame
@@ -27,14 +30,12 @@ public class MachineDisplayCheck : MonoBehaviour
 
 	public void DisplayAllInteractibles()
 	{
-        Debug.Log("display Interactibles");
-        GameObject[] interactibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
-		for (int i = 0; i < interactibleGameObjects.Length; i++)
+		for (int i = 0; i < allInteractibleGameObjects.Length; i++)
 		{
-            MeshRenderer objectRenderer = interactibleGameObjects[i].GetComponent<MeshRenderer>();
+            MeshRenderer objectRenderer = allInteractibleGameObjects[i].GetComponent<MeshRenderer>();
             objectRenderer.enabled = true;
 
-            var interactibleRenderer = interactibleGameObjects[i].GetComponent<Renderer>();
+            var interactibleRenderer = allInteractibleGameObjects[i].GetComponent<Renderer>();
 			if (interactibleRenderer != null)
 			{
 				interactibleRenderer.material = this.interactableMaterial;
@@ -44,11 +45,9 @@ public class MachineDisplayCheck : MonoBehaviour
 
 	public void HideAllInteractibles()
 	{
-        Debug.Log("Hide Interactibles");
-		GameObject[] interactibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
-		for (int i = 0; i < interactibleGameObjects.Length; i++)
+		for (int i = 0; i < allInteractibleGameObjects.Length; i++)
 		{
-            MeshRenderer objectRenderer = interactibleGameObjects[i].GetComponent<MeshRenderer>();
+            MeshRenderer objectRenderer = allInteractibleGameObjects[i].GetComponent<MeshRenderer>();
             objectRenderer.enabled = false;
 		}
 	}
@@ -78,7 +77,6 @@ public class MachineDisplayCheck : MonoBehaviour
 
         if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
 		{
-            Debug.Log("Boxcollision");
 			boxRenderer.material = this.interactableActiveMaterial;
 		}
 	}
