@@ -4,7 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CloseWorkstation : MonoBehaviour {
+public class CloseWorkstation : MonoBehaviour
+{
     [SerializeField] private TransformTweenBehaviour transformTweenBehaviour;
     [SerializeField] private Anchor anchor;
     private AnchorableBehaviour anchorableBehaviour;
@@ -30,15 +31,14 @@ public class CloseWorkstation : MonoBehaviour {
         {
             anchor.gameObject.SetActive(true);
         }
-        Debug.Log("Try Attach - Result:");
-        Anchor pref = anchorableBehaviour.GetNearestValidAnchor(false);
-        if (pref != null)
-        {
-            transform.position = pref.transform.position;
 
-            bool result = anchorableBehaviour.TryAttachToNearestAnchor();
-            Debug.Log(result);
+        var nearestValidAnchor = anchorableBehaviour.GetNearestValidAnchor(false);
+        if (nearestValidAnchor != null)
+        {
+            transform.position = nearestValidAnchor.transform.position;
+            anchorableBehaviour.TryAttachToNearestAnchor();
         }
+
         if (!wasVisible)
         {
             anchor.gameObject.SetActive(false);
