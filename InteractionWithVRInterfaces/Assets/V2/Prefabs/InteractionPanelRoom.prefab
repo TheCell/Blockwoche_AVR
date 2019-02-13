@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23075409706082662}
   - component: {fileID: 222624164892911750}
   - component: {fileID: 114336609522660446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Buttontext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 33782925002666762}
   - component: {fileID: 65336286386108018}
   - component: {fileID: 23292952669788022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 33600005664596520}
   - component: {fileID: 65902282760396490}
   - component: {fileID: 23471058937946714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 23311018228856706}
   - component: {fileID: 222303723036288414}
   - component: {fileID: 114328260386304744}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TextMeshPro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4018420393402730}
   - component: {fileID: 33219744159531154}
   - component: {fileID: 23140325722734586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 4548872613776212}
   - component: {fileID: 33729406503777564}
   - component: {fileID: 23925562051981054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 23893939298341118}
   - component: {fileID: 222263646713772028}
   - component: {fileID: 114234374654472796}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4739937075353524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 54228114332379256}
   - component: {fileID: 114801673547421528}
   - component: {fileID: 114771018889516586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 33690788054528208}
   - component: {fileID: 65914145091280588}
   - component: {fileID: 23553614212596526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 54727722241430482}
   - component: {fileID: 114496445085287740}
   - component: {fileID: 114921942761842838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ZoomPlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 4769357526764274}
   - component: {fileID: 33261314612805204}
   - component: {fileID: 23245953898674906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Panel Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 4488586190198566}
   - component: {fileID: 33586422015518266}
   - component: {fileID: 23781063361385868}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 33342188519721426}
   - component: {fileID: 65559699894141828}
   - component: {fileID: 23129037388897968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 54991018665460932}
   - component: {fileID: 114823834326540994}
   - component: {fileID: 114674176464914618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube UI 2D Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 33442235497356342}
   - component: {fileID: 65555726952702508}
   - component: {fileID: 23251296176082880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 23797603433552574}
   - component: {fileID: 222938547696781614}
   - component: {fileID: 114171663042427334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4996831041561118}
   - component: {fileID: 114413047653483226}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PanelButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 33394616541879212}
   - component: {fileID: 65939227952386302}
   - component: {fileID: 23884687475100126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 33803676097638044}
   - component: {fileID: 65998108672107344}
   - component: {fileID: 23204312700269710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 33365092242208904}
   - component: {fileID: 65179938196432232}
   - component: {fileID: 23005564066151016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 33343399816345040}
   - component: {fileID: 65103113031391678}
   - component: {fileID: 23448306608321838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4853829426248794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4114451758283692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 33097949446365168}
   - component: {fileID: 65965817192161882}
   - component: {fileID: 23933313584046362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 54973383796265410}
   - component: {fileID: 114427066647187124}
   - component: {fileID: 114754355279750188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ZoomMinus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 23089604289252088}
   - component: {fileID: 222923689971559010}
   - component: {fileID: 114326771394402528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Buttontext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 23178423087205854}
   - component: {fileID: 222649414556689216}
   - component: {fileID: 114527963788493654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DescButton1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 4247978763360632}
   - component: {fileID: 114657758135202756}
   - component: {fileID: 114744560303652128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InteractionPanelRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4396253690351200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Temperature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 54302415815806932}
   - component: {fileID: 114054964511192818}
   - component: {fileID: 114945542775511724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AmbientLightButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 23202460196479478}
   - component: {fileID: 222394702565854636}
   - component: {fileID: 114526789303787872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 23535745068801258}
   - component: {fileID: 222329671966465412}
   - component: {fileID: 114358612496039316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4585113598929610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PanelTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4169524006330832}
   - component: {fileID: 108913411014670078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 4599262399156248}
   - component: {fileID: 33204442618193002}
   - component: {fileID: 23508037766816696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ GameObject:
   - component: {fileID: 33000253090281554}
   - component: {fileID: 65397487880507692}
   - component: {fileID: 23729693522430456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4556564628615466}
   - component: {fileID: 114159037007459288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Optional
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 33333671902886920}
   - component: {fileID: 65823995254850074}
   - component: {fileID: 23851581182802810}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +706,7 @@ GameObject:
   - component: {fileID: 23313098202322760}
   - component: {fileID: 222762050815591028}
   - component: {fileID: 114784059523189014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DescButton2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   - component: {fileID: 54469199146122934}
   - component: {fileID: 114866684053607454}
   - component: {fileID: 114324531942099758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RoomLightButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4116135511264070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TemperatureSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 23253500844378686}
   - component: {fileID: 222742596666389128}
   - component: {fileID: 114103018563916832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Buttontext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -898,8 +898,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1659370419278350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.127, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0, y: 0.276, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4769357526764274}
@@ -2632,7 +2632,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 512
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
