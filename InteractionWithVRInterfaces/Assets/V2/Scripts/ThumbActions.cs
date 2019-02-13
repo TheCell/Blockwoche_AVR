@@ -7,8 +7,7 @@ public class ThumbActions : MonoBehaviour {
     [SerializeField] private AttachmentHands attachmentHandsUI;
     [SerializeField] private Material detachUI;
     [SerializeField] private Material attachUI;
-    [SerializeField] private float delayTime;
-    bool delayActive = false;
+    private DetachAttach detachAttach;
 
     private MeshRenderer gameObjectRenderer;
 
@@ -16,35 +15,33 @@ public class ThumbActions : MonoBehaviour {
     {
         gameObjectRenderer = GetComponent<MeshRenderer>();
         gameObjectRenderer.material = detachUI;
+        detachAttach = GetComponentInParent<DetachAttach>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!delayActive)
+        if (detachAttach.IsActive)
         {
             TipAction tipAction = other.gameObject.GetComponent<TipAction>();
             if (tipAction != null)
             {
-                Debug.Log("Detatch UI");
+                detachAttach.Activated();
                 attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
-                tipAction.setMaterial(attachmentHandsUI.enabled);
-                if (attachmentHandsUI.enabled)
-                {
-                    gameObjectRenderer.material = detachUI;
-                }
-                else
-                {
-                    gameObjectRenderer.material = attachUI;
-                }
+                tipAction.SetMaterial(attachmentHandsUI.enabled);
+                SetColor();
             }
-            StartCoroutine(DealyNextControll());
         }
     }
 
-    IEnumerator DealyNextControll()
+    private void SetColor()
     {
-        delayActive = true;
-        yield return new WaitForSeconds(delayTime);
-        delayActive = false;
+        if (attachmentHandsUI.enabled)
+        {
+            gameObjectRenderer.material = detachUI;
+        }
+        else
+        {
+            gameObjectRenderer.material = attachUI;
+        }
     }
 }
