@@ -2499,6 +2499,7 @@ MonoBehaviour:
   attachmentHandsUI: {fileID: 1436167282}
   detachUI: {fileID: 2100000, guid: 81b1d01bebc7fa144ad150c1875360e4, type: 2}
   attachUI: {fileID: 2100000, guid: 41510ee6aced3954ab398f9fcd364c32, type: 2}
+  particleSystem: {fileID: 0}
 --- !u!135 &196710682
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14965,6 +14966,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114001478759431378, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: anchor
+      value: 
+      objectReference: {fileID: 1636591824}
     - target: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
         type: 2}
       propertyPath: hud
@@ -15104,16 +15110,6 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114546131136889360, guid: 73dde5b40fafb9f439cae744996d7913,
-        type: 2}
-      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1113328571}
-    - target: {fileID: 114546131136889360, guid: 73dde5b40fafb9f439cae744996d7913,
-        type: 2}
-      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AttachToParrentIfPossible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73dde5b40fafb9f439cae744996d7913, type: 2}
@@ -15489,24 +15485,6 @@ Transform:
   m_Father: {fileID: 1944263407}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1113328570 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1694853242601310, guid: 73dde5b40fafb9f439cae744996d7913,
-    type: 2}
-  m_PrefabInternal: {fileID: 1066702906}
---- !u!114 &1113328571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1113328570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0071f28c4a8b93444aaa05456a082381, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformTweenBehaviour: {fileID: 1846543996}
-  anchor: {fileID: 1636591824}
 --- !u!1 &1117708079
 GameObject:
   m_ObjectHideFlags: 0
@@ -27069,12 +27047,6 @@ MonoBehaviour:
   _anchors:
     _values:
     - {fileID: 1258382496}
---- !u!114 &1846543996 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114740360299367090, guid: 73dde5b40fafb9f439cae744996d7913,
-    type: 2}
-  m_PrefabInternal: {fileID: 1066702906}
-  m_Script: {fileID: 11500000, guid: 171097f00f497504da15cafb01f904f2, type: 3}
 --- !u!1 &1857513522
 GameObject:
   m_ObjectHideFlags: 0
