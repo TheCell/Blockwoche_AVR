@@ -7,6 +7,7 @@ public class ThumbActions : MonoBehaviour {
     [SerializeField] private AttachmentHands attachmentHandsUI;
     [SerializeField] private Material detachUI;
     [SerializeField] private Material attachUI;
+    [SerializeField] private ParticleSystem particleSystem;
     private DetachAttach detachAttach;
 
     private MeshRenderer gameObjectRenderer;
@@ -42,6 +43,7 @@ public class ThumbActions : MonoBehaviour {
         else
         {
             gameObjectRenderer.material = attachUI;
+            particleSystem.Play();
         }
     }
 }
