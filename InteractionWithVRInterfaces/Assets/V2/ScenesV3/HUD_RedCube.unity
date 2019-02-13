@@ -2710,6 +2710,7 @@ MonoBehaviour:
   detachUI: {fileID: 2100000, guid: 81b1d01bebc7fa144ad150c1875360e4, type: 2}
   attachUI: {fileID: 2100000, guid: 41510ee6aced3954ab398f9fcd364c32, type: 2}
   particleSystem: {fileID: 0}
+  meshRenderer: {fileID: 0}
 --- !u!135 &196710682
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4212,10 +4213,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d47950e0016e644e8df1f79ca048d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  panel: {fileID: 628111849}
   threshhold: 0
-  distance: 1
-  heightOffset: 0
+  distance: 0.8
+  heightOffset: 1
   widthOffset: 0
 --- !u!20 &292423866
 Camera:
