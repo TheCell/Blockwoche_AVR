@@ -9,8 +9,8 @@ public class ThumbActions : MonoBehaviour
     [SerializeField] private Material detachUI;
     [SerializeField] private Material attachUI;
     [SerializeField] List<GameObject> connectParticleObject;
-    private List<MeshRenderer> meshRenderers;
-    private List<ParticleSystem> particleSystems;
+    private List<MeshRenderer> meshRenderers = new List<MeshRenderer>();
+    private List<ParticleSystem> particleSystems = new List<ParticleSystem>();
 
     private DetachAttach detachAttach;
 
@@ -62,6 +62,10 @@ public class ThumbActions : MonoBehaviour
         foreach (MeshRenderer meshRenderer in meshRenderers)
         {
             meshRenderer.enabled = true;
+        }
+        foreach (ParticleSystem particleSystem in particleSystems)
+        {
+            particleSystem.Clear();
         }
     }
 

@@ -7506,8 +7506,8 @@ MonoBehaviour:
   attachUI: {fileID: 2100000, guid: 41510ee6aced3954ab398f9fcd364c32, type: 2}
   connectParticleObject:
   - {fileID: 808082435}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 100455424}
+  - {fileID: 2076494614}
 --- !u!135 &196710682
 SphereCollider:
   m_ObjectHideFlags: 0
