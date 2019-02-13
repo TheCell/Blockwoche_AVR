@@ -14,7 +14,7 @@ public class Interactions : MonoBehaviour
     {
         foreach (var interactionButton in GetComponentsInChildren<InteractionButton>())
         {
-            interactionButton.enabled = true;
+            interactionButton.controlEnabled = true;
         }
     }
 
@@ -22,7 +22,7 @@ public class Interactions : MonoBehaviour
     {
         foreach (var interactionButton in GetComponentsInChildren<InteractionButton>())
         {
-            interactionButton.enabled = false;
+            interactionButton.controlEnabled = false;
         }
     }
 }
