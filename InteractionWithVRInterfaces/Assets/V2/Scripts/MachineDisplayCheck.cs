@@ -19,11 +19,12 @@ public class MachineDisplayCheck : MonoBehaviour
 	void Start ()
 	{
 		hideAllPanels();
-		allInteractibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        allInteractibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
+        HideAllInteractibles();
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
 		
 	}
