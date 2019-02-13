@@ -27,6 +27,7 @@ public class HUD_Follow : MonoBehaviour
         var position = panel.position;
         position.y = panelHeight > 0.2f ? panelHeight : 0.2f;
         position.x += widthOffset;
+        panel.RotateAround(panel.position, panel.up, 180f);
         panel.position = position;
     }
 }
