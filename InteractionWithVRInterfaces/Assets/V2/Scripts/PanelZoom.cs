@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class PanelZoom : MonoBehaviour
 {
-    private GameObject panel;
-
-    private void Start()
-    {
-        panel = GetComponentInParent<GameObject>();
-    }
+    [SerializeField] private GameObject panel;
 
     public void ZoomIn()
     {
