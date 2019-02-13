@@ -1044,7 +1044,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1392023439722168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.807104, y: 0.166, z: 2.1067498}
+  m_LocalPosition: {x: -0.682, y: 1.665, z: 1.091}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4413767137072174}
@@ -3723,7 +3723,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Go to Operation
+  m_text: Perform Quality Control
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3791,7 +3791,7 @@ MonoBehaviour:
   m_margin: {x: 9.774563, y: 2.2575517, z: 9.908693, w: 2.6821005}
   m_textInfo:
     textComponent: {fileID: 114322055650721282}
-    characterCount: 15
+    characterCount: 23
     spriteCount: 0
     spaceCount: 2
     wordCount: 3
@@ -4354,7 +4354,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: SRM P 701
+  m_text: CA T 511
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4381,7 +4381,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.9
+  m_fontSize: 0.95
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4422,7 +4422,7 @@ MonoBehaviour:
   m_margin: {x: 9.764224, y: 2.2575517, z: 9.761819, w: 2.6333022}
   m_textInfo:
     textComponent: {fileID: 114484872513630122}
-    characterCount: 9
+    characterCount: 8
     spriteCount: 0
     spaceCount: 2
     wordCount: 3
@@ -4896,7 +4896,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Go to Standby
+  m_text: Perform Calibration
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4964,10 +4964,10 @@ MonoBehaviour:
   m_margin: {x: 9.774563, y: 2.2575517, z: 9.911121, w: 2.6821005}
   m_textInfo:
     textComponent: {fileID: 114702199764365348}
-    characterCount: 13
+    characterCount: 19
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
