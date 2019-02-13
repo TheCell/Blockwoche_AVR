@@ -18,7 +18,7 @@ public class TipAction : MonoBehaviour {
 		
 	}
 
-    public void setMaterial (bool attachmentHands)
+    public void SetMaterial(bool attachmentHands)
     {
         if (attachmentHands)
         {
