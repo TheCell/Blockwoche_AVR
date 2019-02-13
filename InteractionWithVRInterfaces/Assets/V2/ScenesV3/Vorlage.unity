@@ -5413,8 +5413,10 @@ MonoBehaviour:
   - {fileID: 1687790874}
   - {fileID: 1740281955}
   noMachinesForPanelsSymbol: {fileID: 1809515593}
-  interactableMaterial: {fileID: 0}
-  interactableActiveMaterial: {fileID: 0}
+  interactableMaterial: {fileID: 2100000, guid: 96a80426d202148488eb5373d0c214bc,
+    type: 2}
+  interactableActiveMaterial: {fileID: 2100000, guid: 27c20cd6204fbc0438b86e86e970ce93,
+    type: 2}
 --- !u!114 &374446430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5441,8 +5443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isAttached: 1
-  _anchor: {fileID: 0}
-  _anchorGroup: {fileID: 0}
+  _anchor: {fileID: 878589099}
+  _anchorGroup: {fileID: 185592193}
   maxAnchorRange: 0.3
   useTrajectory: 1
   _motionlessRangeFraction: 0.4
@@ -5497,7 +5499,41 @@ MonoBehaviour:
   _noContactLayer:
     layerIndex: 0
   _eventTable:
-    _entries: []
+    _entries:
+    - enumValue: 140
+      callback:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 374446429}
+            m_MethodName: DisplayAllInteractibles
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+    - enumValue: 141
+      callback:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 374446429}
+            m_MethodName: HideAllInteractibles
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
 --- !u!54 &374446433
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10134,7 +10170,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 630011249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0097, y: 0.05100002, z: 0}
+  m_LocalPosition: {x: 0.0097, y: 0.075, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 643883597}
@@ -10504,7 +10540,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 649814481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.014799997, y: -0.050600007, z: 0}
+  m_LocalPosition: {x: 0.014799997, y: -0.075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1188384651}
@@ -13191,7 +13227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4157122855007356, guid: 0ec3b9195e40d4f4e9ca839839bfbf6a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.050600007
+      value: -0.075
       objectReference: {fileID: 0}
     - target: {fileID: 4157122855007356, guid: 0ec3b9195e40d4f4e9ca839839bfbf6a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14078,7 +14114,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 940489079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0097, y: 0.05100002, z: 0}
+  m_LocalPosition: {x: 0.0097, y: 0.075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 643883597}
@@ -14596,7 +14632,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989246777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.014799997, y: -0.050600007, z: 0}
+  m_LocalPosition: {x: 0.014799997, y: -0.075, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1188384651}
@@ -16477,7 +16513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36db91b3f0571934db1d8fe6c8d7d49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anchObj: {fileID: 0}
+  anchObj: {fileID: 1664183561}
 --- !u!114 &1220231010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16489,7 +16525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36db91b3f0571934db1d8fe6c8d7d49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anchObj: {fileID: 0}
+  anchObj: {fileID: 374446431}
 --- !u!4 &1220231011
 Transform:
   m_ObjectHideFlags: 0
@@ -16991,7 +17027,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4157122855007356, guid: 0ec3b9195e40d4f4e9ca839839bfbf6a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.05100002
+      value: 0.075
       objectReference: {fileID: 0}
     - target: {fileID: 4157122855007356, guid: 0ec3b9195e40d4f4e9ca839839bfbf6a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -24390,8 +24426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isAttached: 1
-  _anchor: {fileID: 0}
-  _anchorGroup: {fileID: 0}
+  _anchor: {fileID: 1258382496}
+  _anchorGroup: {fileID: 1836065993}
   maxAnchorRange: 0.3
   useTrajectory: 1
   _motionlessRangeFraction: 0.4

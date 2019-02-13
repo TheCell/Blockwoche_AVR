@@ -27,12 +27,15 @@ public class MachineDisplayCheck : MonoBehaviour
 
 	public void DisplayAllInteractibles()
 	{
-		GameObject[] interactibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
+        Debug.Log("display Interactibles");
+        GameObject[] interactibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
 		for (int i = 0; i < interactibleGameObjects.Length; i++)
 		{
-			interactibleGameObjects[i].SetActive(true);
-			var interactibleRenderer = interactibleGameObjects[i].GetComponent<Renderer>();
-			if (interactableMaterial != null)
+            MeshRenderer objectRenderer = interactibleGameObjects[i].GetComponent<MeshRenderer>();
+            objectRenderer.enabled = true;
+
+            var interactibleRenderer = interactibleGameObjects[i].GetComponent<Renderer>();
+			if (interactibleRenderer != null)
 			{
 				interactibleRenderer.material = this.interactableMaterial;
 			}
@@ -41,10 +44,12 @@ public class MachineDisplayCheck : MonoBehaviour
 
 	public void HideAllInteractibles()
 	{
+        Debug.Log("Hide Interactibles");
 		GameObject[] interactibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
 		for (int i = 0; i < interactibleGameObjects.Length; i++)
 		{
-			interactibleGameObjects[i].SetActive(false);
+            MeshRenderer objectRenderer = interactibleGameObjects[i].GetComponent<MeshRenderer>();
+            objectRenderer.enabled = false;
 		}
 	}
 
@@ -69,18 +74,21 @@ public class MachineDisplayCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
 	{
-		if (interactableMaterial != null)
+        Renderer boxRenderer = other.GetComponent<Renderer>();
+
+        if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
 		{
-			Renderer boxRenderer = other.GetComponent<Renderer>();
+            Debug.Log("Boxcollision");
 			boxRenderer.material = this.interactableActiveMaterial;
 		}
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		if (interactableMaterial != null)
+        Renderer boxRenderer = other.GetComponent<Renderer>();
+
+        if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
 		{
-			Renderer boxRenderer = other.GetComponent<Renderer>();
 			boxRenderer.material = this.interactableMaterial;
 		}
 	}
