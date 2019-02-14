@@ -47,13 +47,17 @@ public class ThumbActions : MonoBehaviour
         if(tipAction != null)
         {
             timetriggerstay += Time.deltaTime;
+
+            float lerp = Mathf.PingPong(timetriggerstay, detachAttach.DetachAttachActivationDelay) / detachAttach.DetachAttachActivationDelay;
+            gameObjectRenderer.material.Lerp(passive, dettachAttachMat, lerp);
+            SetMaterial(gameObjectRenderer.material);
+
             Debug.Log(detachAttach.DetachAttachActivationDelay - timetriggerstay);
             if (timetriggerstay >= detachAttach.DetachAttachActivationDelay)
             {
                 detachAttach.Activated();
                 attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
-                tipAction.SetMaterial(dettachAttachMat);
-                gameObjectRenderer.material = dettachAttachMat;
+                SetMaterial(dettachAttachMat);
                 HandleConnection();
                 tipAction = null;
             }
@@ -65,10 +69,15 @@ public class ThumbActions : MonoBehaviour
         tipAction = other.gameObject.GetComponent<TipAction>();
         if (tipAction != null)
         {
-            tipAction.SetMaterial(passive);
-            gameObjectRenderer.material = passive;
+            SetMaterial(passive);
             tipAction = null;
         }
+    }
+
+    private void SetMaterial(Material material)
+    {
+        tipAction.SetMaterial(material);
+        gameObjectRenderer.material = material;
     }
 
     private void SetColor()
