@@ -6,11 +6,13 @@ using Leap.Unity.Attachments;
 public class ThumbActions : MonoBehaviour
 {
     [SerializeField] private AttachmentHands attachmentHandsUI;
-    [SerializeField] private Material dettachAttach;
+    [SerializeField] private Material dettachAttachMat;
     [SerializeField] private Material passive;
     [SerializeField] List<GameObject> connectParticleObject;
     private List<MeshRenderer> meshRenderers = new List<MeshRenderer>();
     private List<ParticleSystem> particleSystems = new List<ParticleSystem>();
+    float timetriggerstay = 0;
+    TipAction tipAction = null;
 
     private DetachAttach detachAttach;
 
@@ -19,7 +21,7 @@ public class ThumbActions : MonoBehaviour
     private void Start()
     {
         gameObjectRenderer = GetComponent<MeshRenderer>();
-        gameObjectRenderer.material = dettachAttach;
+        gameObjectRenderer.material = dettachAttachMat;
         detachAttach = GetComponentInParent<DetachAttach>();
         foreach (GameObject particleObject in connectParticleObject)
         {
@@ -35,22 +37,36 @@ public class ThumbActions : MonoBehaviour
             TipAction tipAction = other.gameObject.GetComponent<TipAction>();
             if (tipAction != null)
             {
+                timetriggerstay = 0;
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(tipAction != null)
+        {
+            timetriggerstay += Time.deltaTime;
+            if (timetriggerstay >= detachAttach.DetachAttachActivationDelay)
+            {
                 detachAttach.Activated();
                 attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
-                tipAction.SetMaterial(dettachAttach);
-                gameObjectRenderer.material = dettachAttach;
+                tipAction.SetMaterial(dettachAttachMat);
+                gameObjectRenderer.material = dettachAttachMat;
                 HandleConnection();
+                tipAction = null;
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        TipAction tipAction = other.gameObject.GetComponent<TipAction>();
+        tipAction = other.gameObject.GetComponent<TipAction>();
         if (tipAction != null)
         {
             tipAction.SetMaterial(passive);
             gameObjectRenderer.material = passive;
+            tipAction = null;
         }
     }
 
@@ -58,7 +74,7 @@ public class ThumbActions : MonoBehaviour
     {
         if (attachmentHandsUI.enabled)
         {
-            gameObjectRenderer.material = dettachAttach;
+            gameObjectRenderer.material = dettachAttachMat;
         }
         else
         {
