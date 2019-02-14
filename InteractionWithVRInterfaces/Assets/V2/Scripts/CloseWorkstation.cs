@@ -20,10 +20,10 @@ public class CloseWorkstation : MonoBehaviour
     {
         float waitTime = transformTweenBehaviour.tweenDuration;
         transformTweenBehaviour.PlayBackward();
-        StartCoroutine(lateAttach(waitTime));
+        StartCoroutine(LateAttach(waitTime));
     }
 
-    IEnumerator lateAttach(float time)
+    private IEnumerator LateAttach(float time)
     {
         yield return new WaitForSeconds(time);
         bool wasVisible = anchor.gameObject.activeSelf;

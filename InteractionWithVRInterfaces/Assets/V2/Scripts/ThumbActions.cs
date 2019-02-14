@@ -8,14 +8,15 @@ public class ThumbActions : MonoBehaviour
     [SerializeField] private AttachmentHands attachmentHandsUI;
     [SerializeField] private Material dettachAttachMat;
     [SerializeField] private Material idleMat;
-    [SerializeField] List<GameObject> connectParticleObject;
+    [SerializeField] private List<GameObject> connectParticleObject;
+
     private List<MeshRenderer> meshRenderers = new List<MeshRenderer>();
     private List<ParticleSystem> particleSystems = new List<ParticleSystem>();
-    float timetriggerstay = 0;
-    TipAction tipAction = null;
 
+    private float timetriggerstay;
+
+    private TipAction tipAction;
     private DetachAttach detachAttach;
-
     private MeshRenderer gameObjectRenderer;
 
     private void Start()
@@ -26,6 +27,16 @@ public class ThumbActions : MonoBehaviour
         {
             meshRenderers.Add(particleObject.GetComponent<MeshRenderer>());
             particleSystems.Add(particleObject.GetComponent<ParticleSystem>());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        tipAction = other.gameObject.GetComponent<TipAction>();
+        if (tipAction != null)
+        {
+            SetMaterial(idleMat);
+            tipAction = null;
         }
     }
 
@@ -43,7 +54,7 @@ public class ThumbActions : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(tipAction != null)
+        if (tipAction != null)
         {
             timetriggerstay += Time.deltaTime;
             LerpMaterial();
@@ -53,17 +64,18 @@ public class ThumbActions : MonoBehaviour
             }
         }
     }
+
     private void DetachAttachUI()
     {
         detachAttach.Activated();
         attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
         SetMaterial(dettachAttachMat);
-        StartCoroutine(delayIdleColour(detachAttach.IdleColorAfterActivationDelay, tipAction));
+        StartCoroutine(DelayIdleColour(detachAttach.IdleColorAfterActivationDelay, tipAction));
         HandleConnection();
         tipAction = null;
     }
 
-    IEnumerator delayIdleColour(float time, TipAction tipAction)
+    private IEnumerator DelayIdleColour(float time, TipAction tipAction)
     {
         yield return new WaitForSeconds(time);
         SetMaterial(idleMat, tipAction);
@@ -75,16 +87,6 @@ public class ThumbActions : MonoBehaviour
         float lerp = Mathf.PingPong(timetriggerstay, duration) / duration;
         gameObjectRenderer.material.Lerp(idleMat, dettachAttachMat, lerp);
         SetMaterial(gameObjectRenderer.material);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        tipAction = other.gameObject.GetComponent<TipAction>();
-        if (tipAction != null)
-        {
-            SetMaterial(idleMat);
-            tipAction = null;
-        }
     }
 
     private void SetMaterial(Material material)
@@ -102,32 +104,34 @@ public class ThumbActions : MonoBehaviour
     {
         if (attachmentHandsUI.enabled)
         {
-            enableMeshRenderer();
+            EnableMeshRenderer();
         }
         else
         {
-            playParticleEffect();
+            PlayParticleEffect();
         }
     }
 
-    private void enableMeshRenderer()
+    private void EnableMeshRenderer()
     {
         foreach (MeshRenderer meshRenderer in meshRenderers)
         {
             meshRenderer.enabled = true;
         }
+
         foreach (ParticleSystem particleSystem in particleSystems)
         {
             particleSystem.Clear();
         }
     }
 
-    private void playParticleEffect()
+    private void PlayParticleEffect()
     {
         foreach (MeshRenderer meshRenderer in meshRenderers)
         {
             meshRenderer.enabled = false;
         }
+
         foreach (ParticleSystem particleSystem in particleSystems)
         {
             particleSystem.Play();

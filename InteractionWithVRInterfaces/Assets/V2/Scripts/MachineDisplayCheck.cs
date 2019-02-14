@@ -10,41 +10,42 @@ public class MachineDisplayCheck : MonoBehaviour
     [SerializeField] private Material interactableMaterial;
     [SerializeField] private Material interactableActiveMaterial;
 
-    private GameObject[] allInteractibleGameObjects;
+    private GameObject[] allInteractableGameObjects;
     private bool startShowing;
     private bool inInteractableBox;
 
-    // Use this for initialization
     private void Start()
     {
         HideAllPanels();
-        allInteractibleGameObjects = GameObject.FindGameObjectsWithTag("interactibleObject");
+        allInteractableGameObjects = GameObject.FindGameObjectsWithTag("InteractableObject");
         HideAllInteractibles();
     }
 
     public void DisplayAllInteractibles()
     {
-        for (int i = 0; i < allInteractibleGameObjects.Length; i++)
+        foreach (var interactableGameObject in allInteractableGameObjects)
         {
-            MeshRenderer objectRenderer = allInteractibleGameObjects[i].GetComponent<MeshRenderer>();
+            MeshRenderer objectRenderer = interactableGameObject.GetComponent<MeshRenderer>();
             objectRenderer.enabled = true;
 
-            var interactibleRenderer = allInteractibleGameObjects[i].GetComponent<Renderer>();
+            var interactibleRenderer = interactableGameObject.GetComponent<Renderer>();
             if (interactibleRenderer != null)
             {
                 interactibleRenderer.material = this.interactableMaterial;
             }
         }
+
         startShowing = false;
     }
 
     public void HideAllInteractibles()
     {
-        for (int i = 0; i < allInteractibleGameObjects.Length; i++)
+        foreach (var interactableGameObject in allInteractableGameObjects)
         {
-            MeshRenderer objectRenderer = allInteractibleGameObjects[i].GetComponent<MeshRenderer>();
+            MeshRenderer objectRenderer = interactableGameObject.GetComponent<MeshRenderer>();
             objectRenderer.enabled = false;
         }
+
         startShowing = true;
     }
 
@@ -59,11 +60,9 @@ public class MachineDisplayCheck : MonoBehaviour
                 if (machineNumber != null)
                 {
                     HideAllPanels();
-                    int machineID = machineNumber.getMachineID();
-                    //Debug.Log(machineID);
+                    int machineID = machineNumber.GetMachineID();
                     DisplayPanel(machineID);
                 }
-
             }
 
             if (!inInteractableBox)
@@ -76,7 +75,7 @@ public class MachineDisplayCheck : MonoBehaviour
         {
             Renderer boxRenderer = other.GetComponent<Renderer>();
 
-            if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
+            if (boxRenderer != null && other.gameObject.CompareTag("InteractableObject"))
             {
                 boxRenderer.material = this.interactableActiveMaterial;
             }
@@ -87,7 +86,7 @@ public class MachineDisplayCheck : MonoBehaviour
     {
         Renderer boxRenderer = other.GetComponent<Renderer>();
 
-        if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
+        if (boxRenderer != null && other.gameObject.CompareTag("InteractableObject"))
         {
             inInteractableBox = true;
             boxRenderer.material = this.interactableActiveMaterial;
@@ -98,7 +97,7 @@ public class MachineDisplayCheck : MonoBehaviour
     {
         Renderer boxRenderer = other.GetComponent<Renderer>();
 
-        if (boxRenderer != null && other.gameObject.CompareTag("interactibleObject"))
+        if (boxRenderer != null && other.gameObject.CompareTag("InteractableObject"))
         {
             inInteractableBox = false;
             boxRenderer.material = this.interactableMaterial;
@@ -115,10 +114,11 @@ public class MachineDisplayCheck : MonoBehaviour
 
     private void HideAllPanels()
     {
-        for (int i = 0; i < machinePanels.Length; i++)
+        foreach (var machinePanel in machinePanels)
         {
-            machinePanels[i].SetActive(false);
+            machinePanel.SetActive(false);
         }
+
         noMachinesForPanelsSymbol.SetActive(false);
     }
 }
