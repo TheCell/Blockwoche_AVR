@@ -6,8 +6,8 @@ using Leap.Unity.Attachments;
 public class ThumbActions : MonoBehaviour
 {
     [SerializeField] private AttachmentHands attachmentHandsUI;
-    [SerializeField] private Material detachUI;
-    [SerializeField] private Material attachUI;
+    [SerializeField] private Material dettachAttach;
+    [SerializeField] private Material passive;
     [SerializeField] List<GameObject> connectParticleObject;
     private List<MeshRenderer> meshRenderers = new List<MeshRenderer>();
     private List<ParticleSystem> particleSystems = new List<ParticleSystem>();
@@ -19,7 +19,7 @@ public class ThumbActions : MonoBehaviour
     private void Start()
     {
         gameObjectRenderer = GetComponent<MeshRenderer>();
-        gameObjectRenderer.material = detachUI;
+        gameObjectRenderer.material = dettachAttach;
         detachAttach = GetComponentInParent<DetachAttach>();
         foreach (GameObject particleObject in connectParticleObject)
         {
@@ -37,8 +37,8 @@ public class ThumbActions : MonoBehaviour
             {
                 detachAttach.Activated();
                 attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
-                tipAction.SetMaterial(attachmentHandsUI.enabled);
-                gameObjectRenderer.material = detachUI;
+                tipAction.SetMaterial(dettachAttach);
+                gameObjectRenderer.material = dettachAttach;
                 HandleConnection();
             }
         }
@@ -46,7 +46,24 @@ public class ThumbActions : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        gameObjectRenderer.material = attachUI;
+        TipAction tipAction = other.gameObject.GetComponent<TipAction>();
+        if (tipAction != null)
+        {
+            tipAction.SetMaterial(passive);
+            gameObjectRenderer.material = passive;
+        }
+    }
+
+    private void SetColor()
+    {
+        if (attachmentHandsUI.enabled)
+        {
+            gameObjectRenderer.material = dettachAttach;
+        }
+        else
+        {
+            gameObjectRenderer.material = passive;
+        }
     }
 
     private void HandleConnection()
@@ -75,11 +92,11 @@ public class ThumbActions : MonoBehaviour
 
     private void playParticleEffect()
     {
-        foreach(MeshRenderer meshRenderer in meshRenderers)
+        foreach (MeshRenderer meshRenderer in meshRenderers)
         {
             meshRenderer.enabled = false;
         }
-        foreach(ParticleSystem particleSystem in particleSystems)
+        foreach (ParticleSystem particleSystem in particleSystems)
         {
             particleSystem.Play();
         }
