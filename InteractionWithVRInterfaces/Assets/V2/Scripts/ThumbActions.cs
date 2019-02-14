@@ -21,7 +21,6 @@ public class ThumbActions : MonoBehaviour
     private void Start()
     {
         gameObjectRenderer = GetComponent<MeshRenderer>();
-        gameObjectRenderer.material = dettachAttachMat;
         detachAttach = GetComponentInParent<DetachAttach>();
         foreach (GameObject particleObject in connectParticleObject)
         {
@@ -47,17 +46,17 @@ public class ThumbActions : MonoBehaviour
         if(tipAction != null)
         {
             timetriggerstay += Time.deltaTime;
-
-            //float lerp = Mathf.PingPong(timetriggerstay, detachAttach.DetachAttachActivationDelay) / detachAttach.DetachAttachActivationDelay;
-            //gameObjectRenderer.material.Lerp(passive, dettachAttachMat, lerp);
-            //SetMaterial(gameObjectRenderer.material);
+            float duration = detachAttach.DetachAttachActivationDelay;
+            float lerp = Mathf.PingPong(timetriggerstay, duration) / duration;
+            gameObjectRenderer.material.Lerp(passive, dettachAttachMat, lerp);
+            SetMaterial(gameObjectRenderer.material);
 
             //Debug.Log(detachAttach.DetachAttachActivationDelay - timetriggerstay);
-            if (timetriggerstay >= detachAttach.DetachAttachActivationDelay)
+            if (timetriggerstay >= duration)
             {
                 detachAttach.Activated();
                 attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
-                SetMaterial(dettachAttachMat);
+                SetMaterial(passive);
                 HandleConnection();
                 tipAction = null;
             }
