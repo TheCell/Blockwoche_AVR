@@ -34,7 +34,7 @@ public class ThumbActions : MonoBehaviour
     {
         if (detachAttach.IsActive)
         {
-            TipAction tipAction = other.gameObject.GetComponent<TipAction>();
+            tipAction = other.gameObject.GetComponent<TipAction>();
             if (tipAction != null)
             {
                 timetriggerstay = 0;
@@ -47,6 +47,7 @@ public class ThumbActions : MonoBehaviour
         if(tipAction != null)
         {
             timetriggerstay += Time.deltaTime;
+            Debug.Log(detachAttach.DetachAttachActivationDelay - timetriggerstay);
             if (timetriggerstay >= detachAttach.DetachAttachActivationDelay)
             {
                 detachAttach.Activated();
