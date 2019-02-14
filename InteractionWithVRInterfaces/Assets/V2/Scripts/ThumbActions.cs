@@ -48,11 +48,11 @@ public class ThumbActions : MonoBehaviour
         {
             timetriggerstay += Time.deltaTime;
 
-            float lerp = Mathf.PingPong(timetriggerstay, detachAttach.DetachAttachActivationDelay) / detachAttach.DetachAttachActivationDelay;
-            gameObjectRenderer.material.Lerp(passive, dettachAttachMat, lerp);
-            SetMaterial(gameObjectRenderer.material);
+            //float lerp = Mathf.PingPong(timetriggerstay, detachAttach.DetachAttachActivationDelay) / detachAttach.DetachAttachActivationDelay;
+            //gameObjectRenderer.material.Lerp(passive, dettachAttachMat, lerp);
+            //SetMaterial(gameObjectRenderer.material);
 
-            Debug.Log(detachAttach.DetachAttachActivationDelay - timetriggerstay);
+            //Debug.Log(detachAttach.DetachAttachActivationDelay - timetriggerstay);
             if (timetriggerstay >= detachAttach.DetachAttachActivationDelay)
             {
                 detachAttach.Activated();
