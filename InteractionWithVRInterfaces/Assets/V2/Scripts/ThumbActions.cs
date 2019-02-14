@@ -38,22 +38,26 @@ public class ThumbActions : MonoBehaviour
                 detachAttach.Activated();
                 attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
                 tipAction.SetMaterial(attachmentHandsUI.enabled);
-                SetColor();
+                gameObjectRenderer.material = detachUI;
+                HandleConnection();
             }
         }
     }
 
-    private void SetColor()
+    private void OnTriggerExit(Collider other)
+    {
+        gameObjectRenderer.material = attachUI;
+    }
+
+    private void HandleConnection()
     {
         if (attachmentHandsUI.enabled)
         {
             enableMeshRenderer();
-            gameObjectRenderer.material = detachUI;
         }
         else
         {
             playParticleEffect();
-            gameObjectRenderer.material = attachUI;
         }
     }
 
