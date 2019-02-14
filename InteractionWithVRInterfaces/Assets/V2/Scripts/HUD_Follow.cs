@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HUD_Follow : MonoBehaviour
 {
-    [SerializeField] private Transform panel;
+    [SerializeField] private Transform HUDDisplay;
     [SerializeField] private float threshhold;
     [SerializeField] private float distance;
     [SerializeField] private float heightOffset;
@@ -19,15 +19,15 @@ public class HUD_Follow : MonoBehaviour
 
     private void LateUpdate()
     {
-        panel.LookAt(cam);
+		HUDDisplay.LookAt(cam);
         var camForward = cam.forward;
         camForward.y = 0f;
-        panel.position = cam.position + camForward.normalized * distance;
+		HUDDisplay.position = cam.position + camForward.normalized * distance;
         var panelHeight = cam.localPosition.y - heightOffset;
-        var position = panel.position;
+        var position = HUDDisplay.position;
         position.y = panelHeight > 0.2f ? panelHeight : 0.2f;
         position.x += widthOffset;
-        panel.RotateAround(panel.position, panel.up, 180f);
-        panel.position = position;
+		HUDDisplay.RotateAround(HUDDisplay.position, HUDDisplay.up, 180f);
+		HUDDisplay.position = position;
     }
 }
