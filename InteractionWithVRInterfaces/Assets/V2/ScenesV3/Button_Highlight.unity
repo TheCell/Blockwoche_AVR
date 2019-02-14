@@ -20568,16 +20568,16 @@ Prefab:
         type: 2}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 747060574}
+      objectReference: {fileID: 1066702910}
     - target: {fileID: 114623894032261808, guid: 73dde5b40fafb9f439cae744996d7913,
         type: 2}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: ToggleTemp
       objectReference: {fileID: 0}
     - target: {fileID: 114623894032261808, guid: 73dde5b40fafb9f439cae744996d7913,
         type: 2}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
         type: 2}
@@ -20639,6 +20639,26 @@ Prefab:
       propertyPath: m_text
       value: Hide temperature
       objectReference: {fileID: 0}
+    - target: {fileID: 114507037429062978, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1066702910}
+    - target: {fileID: 114507037429062978, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleLights
+      objectReference: {fileID: 0}
+    - target: {fileID: 114522857591187980, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1066702910}
+    - target: {fileID: 114522857591187980, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleAlarm
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73dde5b40fafb9f439cae744996d7913, type: 2}
   m_IsPrefabAsset: 0
@@ -20660,6 +20680,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1066702906}
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+--- !u!114 &1066702910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
+    type: 2}
+  m_PrefabInternal: {fileID: 1066702906}
+  m_Script: {fileID: 11500000, guid: c0263f06adcf3be40bfc635d91f39ea0, type: 3}
 --- !u!1 &1067715899
 GameObject:
   m_ObjectHideFlags: 0
