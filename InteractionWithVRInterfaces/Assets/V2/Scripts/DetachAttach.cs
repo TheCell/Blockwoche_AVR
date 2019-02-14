@@ -5,6 +5,7 @@ using UnityEngine;
 public class DetachAttach : MonoBehaviour {
     [SerializeField] private float detachAttachReuseDelay = 1f;
     [SerializeField] private float detachAttachActivationDelay = 0.5f;
+    [SerializeField] private float idleColorAfterActivationDelay = 0.2f;
     private bool isActive = true;
     public bool IsActive
     {
@@ -29,6 +30,19 @@ public class DetachAttach : MonoBehaviour {
         private set
         {
             detachAttachActivationDelay = value;
+        }
+    }
+
+    public float IdleColorAfterActivationDelay
+    {
+        get
+        {
+            return idleColorAfterActivationDelay;
+        }
+
+        private set
+        {
+            idleColorAfterActivationDelay = value;
         }
     }
 
