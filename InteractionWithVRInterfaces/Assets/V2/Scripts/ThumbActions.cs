@@ -77,7 +77,7 @@ public class ThumbActions : MonoBehaviour
         SetMaterial(gameObjectRenderer.material);
     }
 
-    private void OnTriggerExit(Collider other, TipAction tipAction)
+    private void OnTriggerExit(Collider other)
     {
         tipAction = other.gameObject.GetComponent<TipAction>();
         if (tipAction != null)
