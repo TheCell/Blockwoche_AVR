@@ -2629,11 +2629,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useHover: 0
   usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  defaultColor: {r: 0.4627451, g: 0.8117647, b: 0.8352941, a: 1}
   suspendedColor: {r: 1, g: 0, b: 0, a: 1}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  primaryHoverColor: {r: 0.5803922, g: 0.81960785, b: 0.8352941, a: 1}
+  pressedColor: {r: 0.44705883, g: 0.8352941, b: 0.5254902, a: 1}
 --- !u!114 &114038944599089048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2666,7 +2666,7 @@ MonoBehaviour:
   _controlEnabled: 1
   startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.03}
-  restingHeight: 0.5
+  restingHeight: 0.25
   _springForce: 0.1
   _OnPress:
     m_PersistentCalls:
@@ -2702,11 +2702,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useHover: 0
   usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  defaultColor: {r: 0.4627451, g: 0.8117647, b: 0.8352941, a: 1}
   suspendedColor: {r: 1, g: 0, b: 0, a: 1}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  primaryHoverColor: {r: 0.5803922, g: 0.81960785, b: 0.8352941, a: 1}
+  pressedColor: {r: 0.44705883, g: 0.8352941, b: 0.5254902, a: 1}
 --- !u!114 &114044659901342600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2965,7 +2965,7 @@ MonoBehaviour:
   _controlEnabled: 1
   startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.03}
-  restingHeight: 0.5
+  restingHeight: 0.25
   _springForce: 0.1
   _OnPress:
     m_PersistentCalls:
@@ -3118,11 +3118,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useHover: 0
   usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  defaultColor: {r: 0.4627451, g: 0.8117647, b: 0.8352941, a: 1}
   suspendedColor: {r: 1, g: 0, b: 0, a: 1}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  primaryHoverColor: {r: 0.5803922, g: 0.81960785, b: 0.8352941, a: 1}
+  pressedColor: {r: 0.44705883, g: 0.8352941, b: 0.5254902, a: 1}
 --- !u!114 &114324636403269682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3155,7 +3155,7 @@ MonoBehaviour:
   _controlEnabled: 1
   startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.03}
-  restingHeight: 0.5
+  restingHeight: 0.25
   _springForce: 0.1
   _OnPress:
     m_PersistentCalls:
@@ -3234,7 +3234,7 @@ MonoBehaviour:
   _controlEnabled: 1
   startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.03}
-  restingHeight: 0.5
+  restingHeight: 0.25
   _springForce: 0.1
   _OnPress:
     m_PersistentCalls:
@@ -3289,7 +3289,7 @@ MonoBehaviour:
   _controlEnabled: 1
   startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.03}
-  restingHeight: 0.5
+  restingHeight: 0.25
   _springForce: 0.1
   _OnPress:
     m_PersistentCalls:
@@ -3458,7 +3458,7 @@ MonoBehaviour:
   _controlEnabled: 1
   startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.03}
-  restingHeight: 0.5
+  restingHeight: 0.25
   _springForce: 0.1
   _OnPress:
     m_PersistentCalls:
@@ -3502,7 +3502,7 @@ MonoBehaviour:
   _controlEnabled: 1
   startingPositionMode: 0
   minMaxHeight: {x: 0, y: 0.03}
-  restingHeight: 0.5
+  restingHeight: 0.25
   _springForce: 0.1
   _OnPress:
     m_PersistentCalls:
@@ -3640,11 +3640,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useHover: 0
   usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  defaultColor: {r: 0.4627451, g: 0.8117647, b: 0.8352941, a: 1}
   suspendedColor: {r: 1, g: 0, b: 0, a: 1}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  primaryHoverColor: {r: 0.5803922, g: 0.81960785, b: 0.8352941, a: 1}
+  pressedColor: {r: 0.44705883, g: 0.8352941, b: 0.5254902, a: 1}
 --- !u!114 &114745577384428648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3658,11 +3658,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useHover: 0
   usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  defaultColor: {r: 0.4627451, g: 0.8117647, b: 0.8352941, a: 1}
   suspendedColor: {r: 1, g: 0, b: 0, a: 1}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  primaryHoverColor: {r: 0.5803922, g: 0.81960785, b: 0.8352941, a: 1}
+  pressedColor: {r: 0.44705883, g: 0.8352941, b: 0.5254902, a: 1}
 --- !u!114 &114786737951494224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3676,11 +3676,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useHover: 0
   usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  defaultColor: {r: 0.4627451, g: 0.8117647, b: 0.8352941, a: 1}
   suspendedColor: {r: 1, g: 0, b: 0, a: 1}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  primaryHoverColor: {r: 0.5803922, g: 0.81960785, b: 0.8352941, a: 1}
+  pressedColor: {r: 0.44705883, g: 0.8352941, b: 0.5254902, a: 1}
 --- !u!114 &114796784380211506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3920,11 +3920,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useHover: 0
   usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  defaultColor: {r: 0.4627451, g: 0.8117647, b: 0.8352941, a: 1}
   suspendedColor: {r: 1, g: 0, b: 0, a: 1}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  primaryHoverColor: {r: 0.5803922, g: 0.81960785, b: 0.8352941, a: 1}
+  pressedColor: {r: 0.44705883, g: 0.8352941, b: 0.5254902, a: 1}
 --- !u!222 &222104884106015176
 CanvasRenderer:
   m_ObjectHideFlags: 1
