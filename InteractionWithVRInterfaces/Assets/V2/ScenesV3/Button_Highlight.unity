@@ -11735,6 +11735,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4365187975974858, guid: 29941e0a17f6ff24d98ad1d65df72c85, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788716099993356, guid: 29941e0a17f6ff24d98ad1d65df72c85, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29941e0a17f6ff24d98ad1d65df72c85, type: 2}
   m_IsPrefabAsset: 0
@@ -11746,6 +11754,21 @@ Transform:
 --- !u!1 &747060571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1918067014366618, guid: 29941e0a17f6ff24d98ad1d65df72c85,
+    type: 2}
+  m_PrefabInternal: {fileID: 747060569}
+--- !u!1 &747060572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1465053510672108, guid: 29941e0a17f6ff24d98ad1d65df72c85,
+    type: 2}
+  m_PrefabInternal: {fileID: 747060569}
+--- !u!1 &747060573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1650428642562680, guid: 29941e0a17f6ff24d98ad1d65df72c85,
+    type: 2}
+  m_PrefabInternal: {fileID: 747060569}
+--- !u!1 &747060574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1899356188891218, guid: 29941e0a17f6ff24d98ad1d65df72c85,
     type: 2}
   m_PrefabInternal: {fileID: 747060569}
 --- !u!1 &752883790
@@ -20541,9 +20564,102 @@ Prefab:
       propertyPath: defaultColor.b
       value: 0.8352941
       objectReference: {fileID: 0}
+    - target: {fileID: 114623894032261808, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 747060574}
+    - target: {fileID: 114623894032261808, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 114623894032261808, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: temp
+      value: 
+      objectReference: {fileID: 747060574}
+    - target: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: lights
+      value: 
+      objectReference: {fileID: 747060573}
+    - target: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: alarm
+      value: 
+      objectReference: {fileID: 747060572}
+    - target: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: showTemp
+      value: 
+      objectReference: {fileID: 1066702909}
+    - target: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: showLights
+      value: 
+      objectReference: {fileID: 1066702908}
+    - target: {fileID: 114399595435550964, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: showAlarm
+      value: 
+      objectReference: {fileID: 1066702907}
+    - target: {fileID: 114584445191577616, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: m_text
+      value: Hide alarms
+      objectReference: {fileID: 0}
+    - target: {fileID: 114584445191577616, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: m_fontSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114584445191577616, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114578131308770342, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: m_text
+      value: Hide lights
+      objectReference: {fileID: 0}
+    - target: {fileID: 114578131308770342, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: m_fontSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848019898496318, guid: 73dde5b40fafb9f439cae744996d7913,
+        type: 2}
+      propertyPath: m_text
+      value: Hide temperature
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73dde5b40fafb9f439cae744996d7913, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1066702907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114584445191577616, guid: 73dde5b40fafb9f439cae744996d7913,
+    type: 2}
+  m_PrefabInternal: {fileID: 1066702906}
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+--- !u!114 &1066702908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114578131308770342, guid: 73dde5b40fafb9f439cae744996d7913,
+    type: 2}
+  m_PrefabInternal: {fileID: 1066702906}
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+--- !u!114 &1066702909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114848019898496318, guid: 73dde5b40fafb9f439cae744996d7913,
+    type: 2}
+  m_PrefabInternal: {fileID: 1066702906}
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
 --- !u!1 &1067715899
 GameObject:
   m_ObjectHideFlags: 0
