@@ -58,15 +58,15 @@ public class ThumbActions : MonoBehaviour
         detachAttach.Activated();
         attachmentHandsUI.enabled = !attachmentHandsUI.enabled;
         SetMaterial(dettachAttachMat);
-        StartCoroutine(delayIdleColour(detachAttach.IdleColorAfterActivationDelay));
+        StartCoroutine(delayIdleColour(detachAttach.IdleColorAfterActivationDelay, tipAction));
         HandleConnection();
         tipAction = null;
     }
 
-    IEnumerator delayIdleColour(float time)
+    IEnumerator delayIdleColour(float time, TipAction tipAction)
     {
         yield return new WaitForSeconds(time);
-        SetMaterial(idleMat);
+        SetMaterial(idleMat, tipAction);
     }
 
     private void LerpMaterial()
@@ -77,7 +77,7 @@ public class ThumbActions : MonoBehaviour
         SetMaterial(gameObjectRenderer.material);
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other, TipAction tipAction)
     {
         tipAction = other.gameObject.GetComponent<TipAction>();
         if (tipAction != null)
@@ -88,6 +88,11 @@ public class ThumbActions : MonoBehaviour
     }
 
     private void SetMaterial(Material material)
+    {
+        SetMaterial(material, tipAction);
+    }
+
+    private void SetMaterial(Material material, TipAction tipAction)
     {
         tipAction.SetMaterial(material);
         gameObjectRenderer.material = material;
